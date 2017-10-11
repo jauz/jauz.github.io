@@ -14,35 +14,22 @@
 	<h3>Jauz</h3>
 	<ul class="nav">
 		<li class="active">个人简历</li>
-		<li>工作经验</li>
+		<li>项目经验</li>
 		<li>个人简历</li>
 		<li>工作经验</li>
 	</ul>
-</div>	
-<div class="slider">
-	<section class="item a"></section>
-	<section class="item b"></section>
 </div>
-
+<div class="slider-wrapper">
+	<div class="slider slider1">
+		<section class="item a"></section>
+		<section class="item b"></section>
+		<section class="item c"></section>
+		<section class="item d"></section>
+	</div>
+</div>
 
 <!-- JS -->
 <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
-<script type="text/javascript">
-$(function(){
-	var toggleButton = $('.menu-toggle'), nav = $('.nav'), navLi = $('.nav').find('li');
-	toggleButton.bind('click', function(e){
-		e.preventDefault();
-		$(this).toggleClass('open');
-		nav.slideToggle();
-	});
-
-	navLi.on("click", function(){
-		$(this).siblings('li').removeClass('active');
-		$(this).addClass('active');
-   		toggleButton.toggleClass('open');
-   		nav.fadeOut(); 
-  	});
-})	
-</script>
+<script type="text/javascript" src="js/index.js"></script>
 </body>
 </html>
