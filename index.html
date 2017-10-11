@@ -3,22 +3,46 @@
 <head>
 	<meta charset="utf-8">
 	<title>Jauz's resume</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<link rel="icon" type="image/x-icon" href="favicon.ico">
 	<link rel="stylesheet" type="text/css" href="css/index.css">
 </head>
 
 <body>
-
-<div class="airWin">
-	<ul>
-		<li><a href=""><i class="jauz jauz-service"></i></a></li>
-		<li><a href=""><i class="jauz jauz-share"></i></a></li>
-		<li><a href="" class="top">置顶</a></li>
+<div class="bars">
+	<a href="#" class="menu-toggle"><span></span></a>
+	<h3>Jauz</h3>
+	<ul class="nav">
+		<li class="active">个人简历</li>
+		<li>工作经验</li>
+		<li>个人简历</li>
+		<li>工作经验</li>
 	</ul>
+</div>	
+<div class="slider">
+	<section class="item a"></section>
+	<section class="item b"></section>
 </div>
+
 
 <!-- JS -->
 <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
-<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript">
+$(function(){
+	var toggleButton = $('.menu-toggle'), nav = $('.nav'), navLi = $('.nav').find('li');
+	toggleButton.bind('click', function(e){
+		e.preventDefault();
+		$(this).toggleClass('open');
+		nav.slideToggle();
+	});
+
+	navLi.on("click", function(){
+		$(this).siblings('li').removeClass('active');
+		$(this).addClass('active');
+   		toggleButton.toggleClass('open');
+   		nav.fadeOut(); 
+  	});
+})	
+</script>
 </body>
 </html>
