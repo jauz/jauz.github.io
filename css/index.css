@@ -113,7 +113,134 @@ li {
 
 .bars h3 {
 	float: left;
-	padding: 2px 59px;
+	padding: 2px 15px;
+}
+
+.bar-header {
+	height: 66px;
+	overflow: hidden;
+}
+.music {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	float: left;
+	margin: 12px 10px;
+	position: relative;
+	cursor: pointer;
+}
+
+.music-bg {
+	background: url(../images/nn.jpg) no-repeat;
+	background-size: 100% 100%;
+	width: 40px;
+	height: 40px;
+	z-index: 100;
+	display: block;
+	border-radius: 100%;
+	animation:runs 15s infinite linear;
+	-o-animation:runs 15s infinite linear;
+	-webkit-animation:runs 15s infinite linear;
+	-moz-animation:runs 15s infinite linear;
+	-ms-animation:runs 15s infinite linear;
+}
+
+.switch {
+	width: 40px;
+	height: 40px;
+	background: transparent;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 222;
+	border-radius: 50%;
+	transition: background .3s ease-in;
+	-o-transition: background .3s ease-in;
+	-webkit-transition: background .3s ease-in;
+	-moz-transition: background .3s ease-in;
+	-ms-transition: background .3s ease-in;
+	cursor: pointer;
+
+}
+
+.switch:hover {
+	background: #f2dfdf;
+	opacity: .7;
+}
+
+
+.stop:before, .stop:after {
+	content:'';
+	height:20px;
+	width:4px;
+	display:block;
+	background:#333;
+	position:absolute;
+	top:10px;
+	left:14px;
+}
+
+.stop:after {
+	left:22px;
+}
+
+
+.start:before {
+	content:'';
+	height:0;
+	width:0;
+	display:block;
+	border:10px transparent solid;
+	border-right-width:0;
+	border-left-color:#333;
+	position:absolute;
+	top:10px;
+	left:16px;
+}
+
+.switch span {
+	display: none;
+}
+
+
+
+
+
+
+@keyframes runs
+	{
+		0%{-webkit-transform:rotate(0deg);-o-transform:rotate(0deg);
+		-moz-transform:rotate(0deg);-ms-transform:rotate(0deg);}
+		100%{-webkit-transform:rotate(360deg);-o-transform:rotate(360deg);
+		-moz-transform:rotate(360deg);-ms-transform:rotate(360deg);}
+	}
+@-webkit-keyframes runs
+{
+	0%{-webkit-transform:rotate(0deg);-o-transform:rotate(0deg);
+	-moz-transform:rotate(0deg);-ms-transform:rotate(0deg);}
+	100%{-webkit-transform:rotate(360deg);-o-transform:rotate(360deg);
+	-moz-transform:rotate(360deg);-ms-transform:rotate(360deg);}
+}
+@-o-keyframes runs
+{
+	0%{-webkit-transform:rotate(0deg);-o-transform:rotate(0deg);
+	-moz-transform:rotate(0deg);-ms-transform:rotate(0deg);}
+	100%{-webkit-transform:rotate(360deg);-o-transform:rotate(360deg);
+	-moz-transform:rotate(360deg);-ms-transform:rotate(360deg);}
+}
+@-moz-keyframes runs
+{
+	0%{-webkit-transform:rotate(0deg);-o-transform:rotate(0deg);
+	-moz-transform:rotate(0deg);-ms-transform:rotate(0deg);}
+	100%{-webkit-transform:rotate(360deg);-o-transform:rotate(360deg);
+	-moz-transform:rotate(360deg);-ms-transform:rotate(360deg);}
+}
+@-ms-keyframes runs
+{
+	0%{-webkit-transform:rotate(0deg);-o-transform:rotate(0deg);
+	-moz-transform:rotate(0deg);-ms-transform:rotate(0deg);}
+	100%{-webkit-transform:rotate(360deg);-o-transform:rotate(360deg);
+	-moz-transform:rotate(360deg);-ms-transform:rotate(360deg);}
 }
 
 .nav {
@@ -242,7 +369,7 @@ li {
 }
 
 .slider .item.a {
-	background-color: blue;
+	background: url("../images/banner.jpg") no-repeat;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-ms-background-size: cover;
