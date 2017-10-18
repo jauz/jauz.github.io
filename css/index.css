@@ -3,15 +3,18 @@ body {
 	height: 100%;
 }
 
-body {
+html, body, div, section, ul, li, img, h3, a {
 	margin: 0;
+	padding: 0;
+}
+
+body {
 	background-color: #181B27;
 }
 
 ul, 
 li {
 	list-style: none;
-	margin: 0;
 }
 
 .clearfix:before,
@@ -260,7 +263,8 @@ li {
 
 .bars h3 {
 	float: left;
-	padding: 2px 28px;
+	line-height: 66px;
+	padding: 0 28px;
 }
 
 .music {
@@ -475,7 +479,7 @@ li {
 	transform-origin: center center -50vh;
 }
 
-@media (max-width: 768px) {
+@media all and (max-width: 768px) {
 	.slider .item {
 		-webkit-perspective: 600px;
 		-moz-perspective: 600px;
