@@ -20,10 +20,12 @@ $(function(){
   	});
 
   	var sound = new Howl({
-	  src: ["images/show.mp3"],
+	  src: ["http://m128.xiami.net/621/2110218621/2102877003/1796903040_1508496811031.mp3?auth_key=1511319600-0-0-68a8bbe1a8f7a88a7880fcd56cb12185"],
 	  autoplay: true,
 	  loop: true
 	});
+
+	Howler.iOSAutoEnable = false;
 
 	var aa = 1;
 	$('.music').hover(function(){
