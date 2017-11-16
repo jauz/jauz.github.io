@@ -278,7 +278,7 @@ li {
 }
 
 .music-bg {
-	background: url(https://jauz.github.io/images/nn.jpg) no-repeat;
+	background: url("https://jauz.github.io/images/nn.jpg") no-repeat;
 	background-size: 100% 100%;
 	width: 40px;
 	height: 40px;
@@ -434,7 +434,8 @@ li {
 	-moz-transform-origin: center center -50vh;
 	-ms-transform-origin: center center -50vh;
 	-o-transform-origin: center center -50vh;
-	transform-origin: center center -50vh; 
+	transform-origin: center center -50vh;
+	background-color: #000; 
 }
 
 .slider .item.b {
@@ -662,12 +663,47 @@ li {
 
 .loading .loading-pic {
 	position: absolute;
-	left: 0;
-	right: 0
-	top: 0;
-	bottom: 0;
-	margin: auto;
-	border: 1px solid red;
+	left: 50%;
+	top: 50%;
+	margin: -50px 0 0 -50px;
 	width: 100px;
 	height: 100px;
+	font-size: 30px;
+	text-align: center;
+	line-height: 100px;	
+}
+
+.loading .loading-pic span {
+	display: block;
+	width: 80px;
+	height: 80px;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	border-radius: 50%;
+	box-shadow: 0 3px 0 #666;
+	animation: rotate 1s infinite linear;
+	-webkit-animation: rotate 1s infinite linear;
+}
+
+.loading .loading-pic i {
+	font-style: normal;
+}
+
+@keyframes rotate {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@-webkit-keyframes rotate {
+	0% {
+		-webkit-transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+	}
 }
