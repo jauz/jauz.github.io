@@ -24,7 +24,7 @@ imgse.forEach(function(item, index){
 		num++;
 		$(".loading-pic i").html(parseInt(num/imgse.length*100) + '%');
 		if(num >= index){
-			// $(".loading").fadeOut();
+			$(".loading").fadeOut();
 		}
 	}
 	if(IEVersion() !== -1){
