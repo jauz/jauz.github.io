@@ -55,3 +55,5 @@ $(function(){
 		$(this).find('span').hide();
 	});
 })
+
+console.log(123);
