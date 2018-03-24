@@ -1,3 +1,12 @@
+/**
+ * test function
+ */
+function hello () {
+	alert("hello");
+}
+
+hello();
+
 var elements = document.getElementsByTagName("*"),
 	imgse = [],
 	i = 0,
