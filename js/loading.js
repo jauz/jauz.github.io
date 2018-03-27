@@ -1,12 +1,3 @@
-/**
- * test function
- */
-function hello () {
-	alert("hello");
-}
-
-hello();
-
 var elements = document.getElementsByTagName("*"),
 	imgse = [],
 	i = 0,
@@ -43,7 +34,6 @@ imgse.forEach(function(item, index){
 		oImg.src = imgse[index].slice(5, -2);
 	}	
 });
-
 
 function IEVersion() {
 	var userAgent = navigator.userAgent;	// 取得浏览器的userAgent字符串
